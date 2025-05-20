@@ -5,12 +5,12 @@ require('dotenv').config();
 async function startPublisher() {
   const nc = await connect({ servers: process.env.NATS_URL });
 
-  console.log('✅ Worker connected to NATS');
+  console.log('Worker connected to NATS');
 
   cron.schedule('*/15 * * * *', () => {
     const message = JSON.stringify({ trigger: 'update' });
     nc.publish('crypto.update', Buffer.from(message));
-    console.log('📤 Published update event to NATS');
+    console.log('Published update event to NATS');
   });
 }
 
