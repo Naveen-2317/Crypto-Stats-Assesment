@@ -25,5 +25,5 @@ This server runs a background job every 15 minutes to:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/crypto-stats-assignment.git
+git clone https://github.com/your-username/Crypto-Stats-Assignment.git
 cd crypto-stats-assignment/worker-server
